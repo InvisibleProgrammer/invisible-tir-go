@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    volumes:
+    - "./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql"
+    restart: always
+    environment:
+      POSTGRES_USER: invisibleprogrammer
+      POSTGRES_PASSWORD: invisiblepassword
+      POSTGRES_DB: tir-db
+    ports:
+      - "5432:5432"
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080
