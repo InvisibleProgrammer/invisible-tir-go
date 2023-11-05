@@ -41,5 +41,9 @@ func RegisterRoutes(app *fiber.App, db *gorm.DB) {
 		return user.DeleteProfile(c, db)
 	})
 
+	app.Get("/thematics", func(c *fiber.Ctx) error {
+		return thematics.ListThematics(c, db)
+	})
+
 	NotFoundHandler(app)
 }
