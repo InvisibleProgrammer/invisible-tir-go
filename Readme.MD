@@ -5,5 +5,3 @@
 - Why update user profile and update user password get's a userId? It should work based on the token
 
 ## Bugs to fix:
-- Cannot re-register a delete user (duplicated email)
-

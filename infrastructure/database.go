@@ -33,6 +33,8 @@ func InitDb() (db *gorm.DB, err error) {
 	}
 	log.Println("Database connected")
 	db.AutoMigrate(&user.User{})
+	log.Println("Running migration scripts")
+	db.Exec("CREATE UNIQUE INDEX idx_email ON users(email) WHERE deleted_at IS NULL;")
 	log.Println("Database Migrated")
 
 	return db, err

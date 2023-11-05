@@ -42,7 +42,7 @@ type AddRoleRequest struct {
 
 type User struct {
 	gorm.Model
-	Email        string  `gorm:"type:varchar(255);unique;not null"`
+	Email        string  `gorm:"type:varchar(255);unique_index:idx_email;not null"`
 	Bio          *string `gorm:"type:varchar(100);"`
 	FullName     *string `gorm:"type:varchar(255)"`
 	Role         int8    `gorm:"type:smallint"`
