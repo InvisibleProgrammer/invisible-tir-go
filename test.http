@@ -22,13 +22,13 @@ Content-Type: application/json
 
 GET http://localhost:3000/users/me
 Content-Type: application/json
-x-access-token: a45a69058db351c511fe7a96535b4acddee5bb4c5a9f15853d
+x-access-token: 79ea15c5d0c8c362a29db1fa7cdf6221b74c90e562ec95f673
 
 ### Update user profile
 
-PUT http://localhost:3000/users/9
+PUT http://localhost:3000/users/1
 Content-Type: application/json
-x-access-token: a45a69058db351c511fe7a96535b4acddee5bb4c5a9f15853d
+x-access-token: 79ea15c5d0c8c362a29db1fa7cdf6221b74c90e562ec95f673
 
 {
     "email": "test1243@test.com",
@@ -38,24 +38,24 @@ x-access-token: a45a69058db351c511fe7a96535b4acddee5bb4c5a9f15853d
 
 ### Update password
 
-PUT http://localhost:3000/users/9/password
+PUT http://localhost:3000/users/1/password
 Content-Type: application/json
-x-access-token: a45a69058db351c511fe7a96535b4acddee5bb4c5a9f15853d
+x-access-token: 79ea15c5d0c8c362a29db1fa7cdf6221b74c90e562ec95f673
 
 {
     "password": "123ABCaaa!!!"
 }
 
 ### Add role
-PUT http://localhost:3000/users/9/role
+PUT http://localhost:3000/users/1/role
 Content-Type: application/json
-x-access-token: a45a69058db351c511fe7a96535b4acddee5bb4c5a9f15853d
+x-access-token: 79ea15c5d0c8c362a29db1fa7cdf6221b74c90e562ec95f673
 
 {
     "role": "SUPERVISOR"
 }
 
-### Add role
-DELETE  http://localhost:3000/users/5
+### Delete user
+DELETE  http://localhost:3000/users/1
 Content-Type: application/json
-x-access-token: a45a69058db351c511fe7a96535b4acddee5bb4c5a9f15853d
+x-access-token: 79ea15c5d0c8c362a29db1fa7cdf6221b74c90e562ec95f673

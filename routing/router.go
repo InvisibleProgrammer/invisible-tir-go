@@ -21,6 +21,10 @@ func RegisterRoutes(app *fiber.App, db *gorm.DB) {
 		return user.LoginUser(c, db)
 	})
 
+	app.Get("/users/me", func(c *fiber.Ctx) error {
+		return user.GetProfile(c, db)
+	})
+
 	app.Put("/users/:id", func(c *fiber.Ctx) error {
 		return user.UpdateProfile(c, db)
 	})
